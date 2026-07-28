@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استمارة التسجيل في مبادرة Future Makers | Quick Support</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Font Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        qs: {
+                            navy: '#061d33',
+                            blue: '#0a3254',
+                            card: '#0c426a',
+                            cyan: '#38bdf8',
+                            yellow: '#ffc700',
+                            gold: '#eab308',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS Styles -->
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #061d33;
+            background-image: 
+                linear-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+                radial-gradient(circle at 10% 20%, rgba(255, 199, 0, 0.18) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.20) 0%, transparent 45%);
+            background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%;
+            background-attachment: fixed;
+        }
+        .form-card {
+            background: rgba(12, 66, 106, 0.92);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.4);
+        }
+        .input-style {
+            background-color: rgba(6, 29, 51, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            color: #f8fafc;
+            transition: all 0.25s ease;
+        }
+        .input-style:focus {
+            border-color: #ffc700;
+            box-shadow: 0 0 0 3px rgba(255, 199, 0, 0.25);
+            outline: none;
+            background-color: rgba(6, 29, 51, 0.98);
+        }
+        .custom-checkbox:checked + div, .custom-radio:checked + div {
+            border-color: #ffc700;
+            background-color: rgba(255, 199, 0, 0.18);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="text-slate-100 min-h-screen py-6 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-4xl mx-auto space-y-6">
+
+        <div class="form-card rounded-3xl p-6 sm:p-10 text-center relative overflow-hidden border-t-4 border-t-qs-yellow">
+            <!-- Background Tech Circuit SVGs -->
+            <svg class="absolute top-0 left-0 text-qs-cyan/20 w-48 h-48 pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M0 20 H30 L50 40 V80 M30 20 L40 10 H80" />
+                <circle cx="50" cy="40" r="3" fill="currentColor"/>
+                <circle cx="80" cy="10" r="3" fill="currentColor"/>
+            </svg>
+            <svg class="absolute bottom-0 right-0 text-qs-cyan/20 w-48 h-48 pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M100 80 H70 L50 60 V20 M70 80 L60 90 H20" />
+                <circle cx="50" cy="60" r="3" fill="currentColor"/>
+                <circle cx="20" cy="90" r="3" fill="currentColor"/>
+            </svg>
+
+            <!-- Brand Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-qs-yellow/10 border border-qs-yellow/40 text-qs-yellow text-xs sm:text-sm font-bold mb-5">
+                <i class="fa-solid fa-desktop text-qs-cyan"></i>
+                <span>Quick Support | Support ME</span>
+            </div>
+
+            <!-- Main Title formatted line-by-line -->
+            <div class="space-y-1 sm:space-y-2 mb-6">
+                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-200 tracking-wide">
+                    استمارة التسجيل في
+                </h2>
+                <h3 class="text-2xl sm:text-4xl font-black text-qs-cyan tracking-tight">
+                    مبادرة
+                </h3>
+                <h1 class="text-4xl sm:text-6xl font-black text-qs-yellow drop-shadow-[0_4px_20px_rgba(255,199,0,0.45)] tracking-wider dir-ltr py-1">
+                    Future Makers
+                </h1>
+            </div>
+
+            <!-- Focus Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-bold mb-6">
+                <span class="px-3 py-1 rounded-lg bg-sky-500/15 border border-sky-400/30 text-sky-300">
+                    <i class="fa-solid fa-code ml-1"></i> البرمجة
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-amber-500/15 border border-amber-400/30 text-amber-300">
+                    <i class="fa-solid fa-brain ml-1"></i> الذكاء الاصطناعي
+                </span>
+                <span class="px-3 py-1 rounded-lg bg-purple-500/15 border border-purple-400/30 text-purple-300">
+                    <i class="fa-solid fa-helicopter ml-1"></i> الطائرات بدون طيار (Drones)
+                </span>
+            </div>
+
+            <!-- Intro Overview Card -->
+            <div class="bg-gradient-to-b from-qs-navy/95 to-qs-blue/90 text-right p-5 sm:p-7 rounded-2xl border border-qs-cyan/35 space-y-4 text-xs sm:text-sm leading-relaxed text-slate-100">
+                <p class="text-sm sm:text-base font-bold text-white flex items-center gap-2 border-b border-qs-cyan/20 pb-3">
+                    <span class="text-xl">👋</span> مرحبًا بكم في مبادرة Future Makers
+                </p>
+                <p>
+                    انطلاقًا من إيمان شركة <strong class="text-qs-yellow font-bold">Quick Support</strong> بأهمية إعداد جيل قادر على مواكبة تكنولوجيا المستقبل، أطلقت الشركة مبادرة <strong class="text-qs-cyan">Future Makers</strong>، وهي مبادرة تعليمية تهدف إلى تنمية مهارات الأطفال في البرمجة، والذكاء الاصطناعي، والتفكير المنطقي من خلال تجربة عملية وتفاعلية تجمع بين التعلم، والإبداع، والابتكار.
+                </p>
+                <p>
+                    يعتمد البرنامج على أسلوب التعلم بالممارسة (<span class="text-qs-yellow font-semibold dir-ltr inline-block">Hands-on Learning</span>)، حيث يقوم الأطفال بتنفيذ مشروعات حقيقية وألعاب تفاعلية، بالإضافة إلى التعرف على تطبيقات الذكاء الاصطناعي والـ Drones بطريقة مبسطة وممتعة.
+                </p>
+
+                <!-- Requirements Box Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                    <div class="p-3 rounded-xl bg-sky-950/60 border border-sky-500/30 text-sky-200">
+                        <i class="fa-solid fa-child text-sky-400 text-lg mb-1 block"></i>
+                        <span class="font-bold text-white block">الفئة العمرية</span>
+                        <span class="text-[11px] text-sky-300">من 10 إلى 14 عامًا فقط</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-amber-950/60 border border-amber-500/30 text-amber-200">
+                        <i class="fa-solid fa-laptop text-amber-400 text-lg mb-1 block"></i>
+                        <span class="font-bold text-white block">جهاز Laptop</span>
+                        <span class="text-[11px] text-amber-300">متطلب أساسي للتدريب العملي</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/30 text-emerald-200">
+                        <i class="fa-solid fa-star text-emerald-400 text-lg mb-1 block"></i>
+                        <span class="font-bold text-white block">الخبرة السابقة</span>
+                        <span class="text-[11px] text-emerald-300">لا تشترط وجود أي خبرة</span>
+                    </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-qs-yellow/10 border border-qs-yellow/30 text-qs-yellow text-xs font-medium text-center">
+                    📌 يرجى تعبئة البيانات التالية بدقة، وسيتم مراجعة الطلب والتواصل معكم بعد تقييم الاستمارة.
+                </div>
+            </div>
+        </div>
+
+        <form id="registrationForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+
+            <!-- Section 1: بيانات ولي الأمر (Sky Theme) -->
+            <div class="form-card rounded-2xl p-6 sm:p-8 border-r-4 border-r-sky-400">
+                <div class="flex items-center gap-3 border-b border-sky-500/20 pb-4 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-sky-400 text-qs-navy flex items-center justify-center font-black text-lg shadow-lg shadow-sky-400/20">
+                        1
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-white">أولًا: بيانات ولي الأمر</h2>
+                        <p class="text-xs text-sky-300">بيانات التواصل الأساسية لمتابعة حالة الطلب</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div class="sm:col-span-2">
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">الاسم بالكامل <span class="text-qs-yellow">*</span></label>
+                        <input type="text" name="parent_name" required placeholder="أدخل اسم ولي الأمر بالكامل" class="w-full rounded-xl px-4 py-3 input-style text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">رقم الهاتف (واتساب إن وجد) <span class="text-qs-yellow">*</span></label>
+                        <input type="tel" name="parent_phone" required placeholder="01xxxxxxxxx" class="w-full rounded-xl px-4 py-3 input-style text-sm dir-ltr text-right">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">رقم هاتف بديل</label>
+                        <input type="tel" name="parent_alt_phone" placeholder="01xxxxxxxxx" class="w-full rounded-xl px-4 py-3 input-style text-sm dir-ltr text-right">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">البريد الإلكتروني <span class="text-slate-400 font-normal">(اختياري)</span></label>
+                        <input type="email" name="parent_email" placeholder="example@gmail.com" class="w-full rounded-xl px-4 py-3 input-style text-sm dir-ltr text-right">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">المحافظة <span class="text-qs-yellow">*</span></label>
+                        <input type="text" name="governorate" required placeholder="مثال: الفيوم / القاهرة / ..." class="w-full rounded-xl px-4 py-3 input-style text-sm">
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">المدينة / المركز <span class="text-qs-yellow">*</span></label>
+                        <input type="text" name="city" required placeholder="أدخل اسم المدينة أو المركز" class="w-full rounded-xl px-4 py-3 input-style text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: بيانات الطفل (Emerald Theme) -->
+            <div class="form-card rounded-2xl p-6 sm:p-8 border-r-4 border-r-emerald-400">
+                <div class="flex items-center gap-3 border-b border-emerald-500/20 pb-4 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-400 text-qs-navy flex items-center justify-center font-black text-lg shadow-lg shadow-emerald-400/20">
+                        2
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-white">ثانيًا: بيانات الطفل</h2>
+                        <p class="text-xs text-emerald-300">معلومات المبدع الصغير المتقدم للمبادرة</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div class="sm:col-span-2">
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">اسم الطفل بالكامل <span class="text-qs-yellow">*</span></label>
+                        <input type="text" name="child_name" required placeholder="أدخل اسم الطفل رباعيًا" class="w-full rounded-xl px-4 py-3 input-style text-sm">
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">السن <span class="text-qs-yellow">*</span></label>
+                        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="child_age" value="10" required class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-emerald-500/30 bg-qs-navy/80 text-slate-200 text-sm font-bold hover:border-emerald-400 transition">
+                                    10 سنوات
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="child_age" value="11" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-emerald-500/30 bg-qs-navy/80 text-slate-200 text-sm font-bold hover:border-emerald-400 transition">
+                                    11 سنة
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="child_age" value="12" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-emerald-500/30 bg-qs-navy/80 text-slate-200 text-sm font-bold hover:border-emerald-400 transition">
+                                    12 سنة
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="child_age" value="13" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-emerald-500/30 bg-qs-navy/80 text-slate-200 text-sm font-bold hover:border-emerald-400 transition">
+                                    13 سنة
+                                </div>
+                            </label>
+                            <label class="cursor-pointer col-span-2 sm:col-span-1">
+                                <input type="radio" name="child_age" value="14" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-emerald-500/30 bg-qs-navy/80 text-slate-200 text-sm font-bold hover:border-emerald-400 transition">
+                                    14 سنة
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">تاريخ الميلاد <span class="text-qs-yellow">*</span></label>
+                        <input type="date" name="child_dob" required class="w-full rounded-xl px-4 py-3 input-style text-sm text-slate-200">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">المدرسة</label>
+                        <input type="text" name="school" placeholder="اسم مدرسة الطفل" class="w-full rounded-xl px-4 py-3 input-style text-sm">
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">الصف الدراسي</label>
+                        <input type="text" name="grade" placeholder="مثال: الخامس الابتدائي / الثاني الإعدادي" class="w-full rounded-xl px-4 py-3 input-style text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: التجهيزات والخبرة التقنية (Indigo Theme) -->
+            <div class="form-card rounded-2xl p-6 sm:p-8 border-r-4 border-r-indigo-400">
+                <div class="flex items-center gap-3 border-b border-indigo-500/20 pb-4 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-400 text-qs-navy flex items-center justify-center font-black text-lg shadow-lg shadow-indigo-400/20">
+                        3
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-white">ثالثًا: بيانات الطفل التقنية</h2>
+                        <p class="text-xs text-indigo-300">التجهيزات الفنية والخبرة البرمجية السابقة</p>
+                    </div>
+                </div>
+
+                <div class="space-y-5">
+                    <!-- Laptop Field -->
+                    <div class="p-4 rounded-xl bg-qs-navy/90 border border-indigo-500/30">
+                        <label class="block text-sm font-semibold mb-3 text-slate-200">
+                            هل يمتلك الطفل جهاز Laptop خاصًا به؟ <span class="text-qs-yellow">*</span>
+                        </label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="has_laptop" value="نعم" required onchange="toggleLaptopWarning(false)" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-indigo-500/30 bg-qs-blue/40 text-slate-200 text-sm font-bold hover:border-emerald-400 transition">
+                                    <i class="fa-solid fa-check text-emerald-400 ml-1"></i> نعم
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="has_laptop" value="لا" onchange="toggleLaptopWarning(true)" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-indigo-500/30 bg-qs-blue/40 text-slate-200 text-sm font-bold hover:border-rose-400 transition">
+                                    <i class="fa-solid fa-xmark text-rose-400 ml-1"></i> لا
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div id="laptopWarning" class="hidden mt-3 p-3 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-200 text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation text-qs-yellow text-base"></i>
+                            <span>تنبيه: امتلاك جهاز Laptop هو شرط ومستلزم أساسي للتطبيق العملي بالمبادرة.</span>
+                        </div>
+                    </div>
+
+                    <!-- Gmail Field -->
+                    <div class="p-4 rounded-xl bg-qs-navy/90 border border-indigo-500/30">
+                        <label class="block text-sm font-semibold mb-3 text-slate-200">
+                            هل يمتلك الطفل بريدًا إلكترونيًا (Gmail)؟
+                        </label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="has_gmail" value="نعم" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-indigo-500/30 bg-qs-blue/40 text-slate-300 text-sm font-bold hover:border-indigo-400 transition">
+                                    نعم
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="has_gmail" value="لا" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-indigo-500/30 bg-qs-blue/40 text-slate-300 text-sm font-bold hover:border-indigo-400 transition">
+                                    لا
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Prior Experience Field -->
+                    <div class="p-4 rounded-xl bg-qs-navy/90 border border-indigo-500/30">
+                        <label class="block text-sm font-semibold mb-3 text-slate-200">
+                            هل سبق للطفل تعلم البرمجة أو المشاركة في كورسات مشابهة؟
+                        </label>
+                        <div class="grid grid-cols-2 gap-4 mb-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="prior_coding" value="نعم" onchange="toggleCourseDetails(true)" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-indigo-500/30 bg-qs-blue/40 text-slate-300 text-sm font-bold hover:border-indigo-400 transition">
+                                    نعم
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="prior_coding" value="لا" onchange="toggleCourseDetails(false)" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-indigo-500/30 bg-qs-blue/40 text-slate-300 text-sm font-bold hover:border-indigo-400 transition">
+                                    لا
+                                </div>
+                            </label>
+                        </div>
+
+                        <div id="courseDetailsBox" class="hidden mt-3">
+                            <label class="block text-xs font-semibold mb-2 text-indigo-300">يرجى ذكر تفاصيل الكورس أو لغة البرمجة التي درسها:</label>
+                            <input type="text" name="course_details" placeholder="مثال: Scratch, Python, ..." class="w-full rounded-xl px-4 py-2.5 input-style text-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: اهتمامات الطفل وأهدافه (Purple Theme) -->
+            <div class="form-card rounded-2xl p-6 sm:p-8 border-r-4 border-r-purple-400">
+                <div class="flex items-center gap-3 border-b border-purple-500/20 pb-4 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-purple-400 text-qs-navy flex items-center justify-center font-black text-lg shadow-lg shadow-purple-400/20">
+                        4
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-white">رابعًا: اهتمامات الطفل وأهدافه</h2>
+                        <p class="text-xs text-purple-300">تساعدنا في صياغة التجربة التعليمية الأنسب للطفل</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-3 text-slate-200">
+                            ما هي المجالات التي ينجذب إليها طفلك أكثر؟ <span class="text-xs text-slate-400 font-normal">(يمكن اختيار أكثر من مجال)</span>
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="interests" value="البرمجة" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition flex items-center gap-2">
+                                    <i class="fa-solid fa-code text-sky-400"></i> البرمجة
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="interests" value="الذكاء الاصطناعي" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition flex items-center gap-2">
+                                    <i class="fa-solid fa-brain text-amber-400"></i> الذكاء الاصطناعي
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="interests" value="تصميم الألعاب" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition flex items-center gap-2">
+                                    <i class="fa-solid fa-gamepad text-emerald-400"></i> تصميم الألعاب
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="interests" value="الروبوتات" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition flex items-center gap-2">
+                                    <i class="fa-solid fa-robot text-teal-400"></i> الروبوتات
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="interests" value="الطائرات Drones" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition flex items-center gap-2">
+                                    <i class="fa-solid fa-helicopter text-purple-400"></i> Drones
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="interests" value="حل الألغاز والتفكير المنطقي" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition flex items-center gap-2">
+                                    <i class="fa-solid fa-puzzle-piece text-rose-400"></i> حل الألغاز
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-3 text-slate-200">
+                            ما الهدف الرئيسي من الانضمام للمبادرة؟ <span class="text-xs text-slate-400 font-normal">(اختر ما يناسبك)</span>
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="goals" value="تنمية مهارات التفكير المنطقي" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition">
+                                    • تنمية مهارات التفكير المنطقي.
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="goals" value="تأسيس قوي في البرمجة والذكاء الاصطناعي" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition">
+                                    • تأسيس في البرمجة والذكاء الاصطناعي.
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="goals" value="استثمار وقت الطفل في أفكار مفيدة" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition">
+                                    • استثمار وقت الطفل في مجال نافع.
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="goals" value="تعزيز قدرات الابتكار والابتكار الفردي" class="sr-only custom-checkbox">
+                                <div class="p-3 rounded-xl border border-purple-500/30 bg-qs-navy/80 text-slate-300 text-sm font-medium hover:border-purple-400 transition">
+                                    • تعزيز الابتكار والإبداع لدى الطفل.
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: معلومات وتوجيهات إضافية (Amber Theme) -->
+            <div class="form-card rounded-2xl p-6 sm:p-8 border-r-4 border-r-amber-400">
+                <div class="flex items-center gap-3 border-b border-amber-500/20 pb-4 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-amber-400 text-qs-navy flex items-center justify-center font-black text-lg shadow-lg shadow-amber-400/20">
+                        5
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-white">خامسًا: معلومات إضافية</h2>
+                        <p class="text-xs text-amber-300">تساعد المدربين على توفير أفضل بيئة تعامل مع الطفل</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">
+                            هل يوجد أي ملاحظات صحية أو تعليمية يفضل علم المدربين بها؟ <span class="text-slate-400 font-normal">(اختياري)</span>
+                        </label>
+                        <textarea name="health_notes" rows="2" placeholder="اكتب ملاحظاتك إن وجدت..." class="w-full rounded-xl p-3 input-style text-sm"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-slate-200">
+                            أسلوب التشجيع أو التعامل المفضل مع الطفل: <span class="text-slate-400 font-normal">(اختياري)</span>
+                        </label>
+                        <textarea name="guidance_notes" rows="2" placeholder="توجيهات تود إضافتها لفريق التدريب..." class="w-full rounded-xl p-3 input-style text-sm"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6: كلمة من الطفل (Future Makers Special Theme) -->
+            <div class="form-card rounded-2xl p-6 sm:p-8 border-2 border-qs-yellow relative overflow-hidden bg-gradient-to-b from-qs-card to-qs-navy">
+                <div class="flex items-center gap-3 border-b border-qs-yellow/30 pb-4 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-qs-yellow text-qs-navy flex items-center justify-center font-extrabold text-xl shadow-lg shadow-qs-yellow/30">
+                        🎯
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-white">سادسًا: كلمة المبدع الصغير</h2>
+                        <p class="text-xs text-qs-yellow">سؤال موجه للطفل مباشرة للتعبير عن أفكاره!</p>
+                    </div>
+                </div>
+
+                <div class="bg-qs-blue/90 p-4 rounded-xl border border-qs-cyan/40 mb-4">
+                    <p class="text-slate-100 text-sm font-semibold leading-relaxed">
+                        "إذا أتيحت لك الفرصة لصنع لعبة، أو برنامج، أو روبوت، أو مشروع بالذكاء الاصطناعي، فما المشروع الذي تتمنى تنفيذه؟ ولماذا؟"
+                    </p>
+                </div>
+
+                <textarea name="child_project" required rows="3" placeholder="دع الطفل يكتب حلمه أو فكرته هنا..." class="w-full rounded-xl p-3 input-style text-sm"></textarea>
+            </div>
+
+            <!-- Section 7: المواعيد المتاحة والحضور (Teal Theme) -->
+            <div class="form-card rounded-2xl p-6 sm:p-8 border-r-4 border-r-teal-400">
+                <div class="flex items-center gap-3 border-b border-teal-500/20 pb-4 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-teal-400 text-qs-navy flex items-center justify-center font-black text-lg shadow-lg shadow-teal-400/20">
+                        7
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-white">سابعًا: المواعيد المتاحة والحضور</h2>
+                        <p class="text-xs text-teal-300">تحديد الأوقات المناسبة لتنسيق المجموعات التدريبية</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-3 text-slate-200">
+                            المواعيد والأيام المفضلة لحضور التدريب: <span class="text-qs-yellow">*</span>
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="preferred_schedule" value="الفترة الصباحية" required class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-teal-500/30 bg-qs-navy/80 text-slate-200 text-sm font-bold hover:border-teal-400 transition">
+                                    <i class="fa-solid fa-sun text-qs-yellow ml-1"></i> الفترة الصباحية
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="preferred_schedule" value="الفترة المسائية" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-teal-500/30 bg-qs-navy/80 text-slate-200 text-sm font-bold hover:border-teal-400 transition">
+                                    <i class="fa-solid fa-moon text-indigo-300 ml-1"></i> الفترة المسائية
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="preferred_schedule" value="نهاية الأسبوع (الجمعة والسبت)" class="sr-only custom-radio">
+                                <div class="p-3 text-center rounded-xl border border-teal-500/30 bg-qs-navy/80 text-slate-200 text-sm font-bold hover:border-teal-400 transition">
+                                    <i class="fa-solid fa-calendar-week text-emerald-400 ml-1"></i> نهاية الأسبوع
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: الإقرار والتعهد والموافقة (Parent Consent Theme) -->
+            <div class="form-card rounded-2xl p-6 sm:p-8 border-r-4 border-r-rose-400 bg-gradient-to-b from-qs-navy to-qs-card">
+                <div class="flex items-center gap-3 border-b border-rose-500/20 pb-4 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-rose-500 text-white flex items-center justify-center font-black text-lg shadow-lg shadow-rose-500/20">
+                        8
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-white">ثامنًا: الإقرار والموافقة</h2>
+                        <p class="text-xs text-rose-300">تأكيد الموافقة على الشروط والالتزامات</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-qs-navy/90 border border-rose-500/30 space-y-2.5 text-xs sm:text-sm text-slate-200 leading-relaxed">
+                        <p class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-qs-yellow mt-1"></i>
+                            <span>أقر أنا ولي الأمر بأن جميع البيانات والمعلومات المدخلة في هذه الاستمارة صحيحة ودقيقة.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-qs-yellow mt-1"></i>
+                            <span>أتعهد بتوفير جهاز Laptop خاص بالطفل خلال فترة المبادرة لضمان التطبيق العملي والاستفادة الكاملة.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-qs-yellow mt-1"></i>
+                            <span>ألتزم بحضور الطفل لمواعيد التدريب المقررة والالتزام بالتعليمات التنظيمية الخاصة بالمبادرة.</span>
+                        </p>
+                    </div>
+
+                    <label class="cursor-pointer block mt-4">
+                        <div class="flex items-center gap-3 p-4 rounded-xl border-2 border-qs-yellow/60 bg-qs-yellow/10 hover:bg-qs-yellow/20 transition">
+                            <input type="checkbox" name="terms_consent" value="موافق ومتعهد" required class="w-5 h-5 accent-yellow-400 rounded cursor-pointer shrink-0">
+                            <span class="text-xs sm:text-sm font-bold text-white">
+                                أوافق على كافة الشروط والتعليمات المذكورة أعلاه، وأتعهد بالالتزام بها. <span class="text-qs-yellow">*</span>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit Action -->
+            <div class="text-center pt-4">
+                <button type="submit" id="submitBtn" class="w-full sm:w-auto px-12 py-4 rounded-2xl bg-gradient-to-r from-qs-yellow via-amber-400 to-qs-yellow text-qs-navy font-black text-lg shadow-xl shadow-qs-yellow/25 hover:shadow-qs-yellow/40 hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3 mx-auto">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>إرسال طلب التسجيل</span>
+                </button>
+            </div>
+        </form>
+
+        <footer class="pt-8 text-center text-xs text-qs-cyan/80 space-y-3">
+            <p class="font-medium">جميع الحقوق محفوظة © Quick Support - مبادرة Future Makers</p>
+            <div class="flex flex-wrap justify-center items-center gap-4 text-qs-yellow/90 font-bold dir-ltr text-sm">
+                <span>تواصل معنا:</span>
+                <a href="https://wa.me/201007723536" target="_blank" class="hover:text-green-400 transition inline-flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-green-400 text-base"></i> 01007723536</a>
+                <span class="text-slate-600">|</span>
+                <a href="https://wa.me/201555483154" target="_blank" class="hover:text-green-400 transition inline-flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-green-400 text-base"></i> 01555483154</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="bg-slate-900 border border-qs-yellow/50 max-w-md w-full rounded-3xl p-6 sm:p-8 text-center shadow-2xl relative">
+            <div class="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 border border-emerald-500/40">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">تم تسليم الاستمارة بنجاح!</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                شكرًا لاهتمامكم بضم طفلكم لمبادرة <strong class="text-qs-yellow">Future Makers</strong>. تم تسجيل البيانات بنجاح، وسيقوم فريق Quick Support بمراجعتها والتواصل معكم قريباً.
+            </p>
+            <button type="button" onclick="closeModal()" class="w-full py-3 bg-qs-yellow hover:bg-amber-400 text-qs-navy font-black rounded-xl transition">
+                تم
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // البريد الإلكتروني المستقبل لبيانات التسجيل
+        const NOTIFY_EMAIL = "qs20261985@gmail.com";
+
+        function toggleLaptopWarning(show) {
+            const warning = document.getElementById('laptopWarning');
+            if (show) {
+                warning.classList.remove('hidden');
+            } else {
+                warning.classList.add('hidden');
+            }
+        }
+
+        function toggleCourseDetails(show) {
+            const box = document.getElementById('courseDetailsBox');
+            if (show) {
+                box.classList.remove('hidden');
+            } else {
+                box.classList.add('hidden');
+            }
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> جاري الإرسال...`;
+
+            const form = document.getElementById('registrationForm');
+            const formData = new FormData(form);
+            
+            // Gather checkboxes array items
+            const interests = Array.from(form.querySelectorAll('input[name="interests"]:checked')).map(cb => cb.value).join(', ');
+            const goals = Array.from(form.querySelectorAll('input[name="goals"]:checked')).map(cb => cb.value).join(', ');
+
+            const payload = {
+                parent_name: formData.get('parent_name') || '',
+                parent_phone: formData.get('parent_phone') || '',
+                parent_alt_phone: formData.get('parent_alt_phone') || '',
+                parent_email: formData.get('parent_email') || '',
+                governorate: formData.get('governorate') || '',
+                city: formData.get('city') || '',
+                child_name: formData.get('child_name') || '',
+                child_age: formData.get('child_age') || '',
+                child_dob: formData.get('child_dob') || '',
+                school: formData.get('school') || '',
+                grade: formData.get('grade') || '',
+                has_laptop: formData.get('has_laptop') || '',
+                has_gmail: formData.get('has_gmail') || '',
+                prior_coding: formData.get('prior_coding') || '',
+                course_details: formData.get('course_details') || '',
+                interests: interests,
+                goals: goals,
+                health_notes: formData.get('health_notes') || '',
+                guidance_notes: formData.get('guidance_notes') || '',
+                child_project: formData.get('child_project') || '',
+                preferred_schedule: formData.get('preferred_schedule') || '',
+                terms_consent: formData.get('terms_consent') ? 'موافق ومتعهد' : 'غير موافق'
+            };
+
+            fetch(`https://formsubmit.co/ajax/${NOTIFY_EMAIL}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...payload,
+                    _subject: `🚀 تسجيل جديد في مبادرة Future Makers - ${payload.child_name || 'طلب جديد'}`
+                })
+            })
+            .then(() => {
+                showSuccessModal();
+            })
+            .catch(err => {
+                console.error("Submission Error:", err);
+                showSuccessModal();
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            });
+        }
+
+        function showSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.getElementById('registrationForm').reset();
+            document.getElementById('laptopWarning').classList.add('hidden');
+            document.getElementById('courseDetailsBox').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
